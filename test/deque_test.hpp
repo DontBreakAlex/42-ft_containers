@@ -210,19 +210,19 @@ void test_Deque(void)
 	{
 		DequeType deq;
 
-		deq.assign(5, 42);
+		deq.assign((size_t)5, 42);
 		display_container("[42, 42, 42, 42, 42]:", deq);
 			assert(deq.size() == 5);
 
 		DequeType deq2;
-		deq2.assign(5, 43);
+		deq2.assign((size_t)5, 43);
 		display_container("deq2[43, 43, 43, 43, 43]:", deq2);
 			assert(deq2.size() == 5);
 		deq.assign(deq2.begin(), deq2.end());
 		display_container("deq [43, 43, 43, 43, 43]:", deq);
 			assert(deq.size() == 5);
 
-		deq2.assign(5, 44);
+		deq2.assign((size_t)5, 44);
 		display_container("deq[43, 43, 43, 43, 43]:", deq);
 		display_container("deq2[44, 44, 44, 44, 44]:", deq2);
 			assert(deq2.size() == 5);
@@ -239,7 +239,7 @@ void test_Deque(void)
 			assert(deq.back() == 5);
 			assert(deq.size() == 1);
 
-		deq.insert(deq.begin(), 2, 42);
+		deq.insert(deq.begin(), (size_t)2, 42);
 		display_container("deq[42, 42, 5]:", deq);
 			assert(deq.front() == 42);
 			assert(deq.back() == 5);
@@ -265,10 +265,10 @@ void test_Deque(void)
 
 		DequeType deq3;
 			assert(deq3.size() == 0);
-		deq3.insert(deq3.begin(), 66, 66);
+		deq3.insert(deq3.begin(), (size_t)66, 66);
 		display_container("deq3 66x66:", deq3);
 			assert(deq3.size() == 66);
-		deq3.insert(deq3.begin() + 20, 66, 66);
+		deq3.insert(deq3.begin() + 20, (size_t)66, 66);
 		display_container("deq3 132x66", deq3);
 			assert(deq3.size() == 132);
 	}

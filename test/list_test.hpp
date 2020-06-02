@@ -200,19 +200,19 @@ void test_List(void)
 		ListType lst;
 			assert(lst.size() == 0);
 
-		lst.assign(5, 42);
+		lst.assign((size_t)5, 42);
 		display_container("[42, 42, 42, 42, 42]:", lst);
 			assert(lst.size() == 5);
 
 		ListType lst2;
-		lst2.assign(5, 43);
+		lst2.assign((size_t)5, 43);
 		display_container("lst2[43, 43, 43, 43, 43]:", lst2);
 			assert(lst2.size() == 5);
 		lst.assign(lst2.begin(), lst2.end());
 		display_container("lst [43, 43, 43, 43, 43]:", lst);
 			assert(lst.size() == 5);
 
-		lst2.assign(5, 44);
+		lst2.assign((size_t)5, 44);
 		display_container("lst[43, 43, 43, 43, 43]:", lst);
 			assert(lst.size() == 5);
 		display_container("lst2[44, 44, 44, 44, 44]:", lst2);
@@ -228,7 +228,7 @@ void test_List(void)
 		display_container("[5]:", lst);
 			assert(lst.size() == 1);
 
-		lst.insert(lst.begin(), 2, 42);
+		lst.insert(lst.begin(), (size_t)2, 42);
 		display_container("lst[42, 42, 5]:", lst);
 			assert(lst.size() == 3);
 
@@ -371,7 +371,7 @@ void test_List(void)
 
 		std::cout << "double list:" << '\n';
 		{
-			ft::List<double> lst;
+			ft::list<double> lst;
 			lst.push_back(2.72);
 			lst.push_back(3.14);
 			lst.push_back(12.15);

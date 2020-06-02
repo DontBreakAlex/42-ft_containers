@@ -56,7 +56,7 @@ void test_Queue(void)
 		lst.push_back(42);
 		lst.push_back(43);
 		lst.push_back(99);
-		display_container("[5, 42, 43, 99] {List}:", lst);
+		display_container("[5, 42, 43, 99] {list}:", lst);
 			assert(lst.size() == 4);
 
 		QueueType que(lst);
@@ -79,7 +79,7 @@ void test_Queue(void)
 		std::cout << "[] (size: " << que.size() << ")\n";
 			assert(que.size() == 0);
 
-		display_container("[5, 42, 43, 99] {ft::List after, no change}:", lst);
+		display_container("[5, 42, 43, 99] {ft::list after, no change}:", lst);
 	}
 
 	std::cout << "\n---comparison\n\n";

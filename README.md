@@ -1,9 +1,10 @@
-# ft_containers
+# These are the tests for ft_containers from [ncolomer](https://profile.intra.42.fr/users/ncolomer)
 
-## Ressources
+## To run
+Clone in your work folder. Update includes in test.hpp in needed. Run make test_full.
 
-* [Containers](http://www.cplusplus.com/reference/stl/)
-* [Allocating without calling constructor](https://stackoverflow.com/a/4576380)
-* [Binary trees for Map](https://stackoverflow.com/a/47934594)
-* [Map Comparator](https://stackoverflow.com/questions/5733254/how-can-i-create-my-own-comparator-for-a-map)
-* [Deque](https://en.cppreference.com/w/cpp/container/deque)
+```
+git clone https://github.com/DontBreakAlex/42-ft_containers.git
+cd 42-ft_containers
+make test_full
+```

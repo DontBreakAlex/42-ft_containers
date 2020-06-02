@@ -17,35 +17,35 @@
  * * std tests
  **/
 void start_all_std_tests(void) {
-	test("Vector");
+	test("vector");
 	test_Vector<std::vector<int> >();
 #ifdef FULL
 	test_Vector<std::vector<Number> >();
 #endif
-	end_test("Vector");
+	end_test("vector");
 
-	test("List");
+	test("list");
 	test_List<std::list<int>, int>();
 #ifdef FULL
 	test_List<std::list<Number>, Number>();
 #endif
-	end_test("List");
+	end_test("list");
 
-	test("Stack");
+	test("stack");
 	test_Stack<std::stack<int>, std::deque<int> >();
 #ifdef FULL
 	test_Stack<std::stack<Number>, std::deque<Number> >();
 #endif
-	end_test("Stack");
+	end_test("stack");
 
-	test("Queue");
+	test("queue");
 	test_Queue<std::queue<int>, std::deque<int> >();
 #ifdef FULL
 	test_Queue<std::queue<Number>, std::deque<Number> >();
 #endif
-	end_test("Queue");
+	end_test("queue");
 
-	test("Map");
+	test("map");
 	test_Map<std::map<int, int> >();
 #ifdef FULL
 	test_Map<std::map<char, int> >(48);
@@ -53,9 +53,9 @@ void start_all_std_tests(void) {
 	test_Map<std::map<Number, int> >();
 	test_Map<std::map<Number, Number> >();
 #endif
-	end_test("Map");
+	end_test("map");
 
-	test("Multimap");
+	test("multimap");
 	test_Multimap<std::multimap<int, int> >();
 #ifdef FULL
 	test_Multimap<std::multimap<char, int> >(48);
@@ -63,102 +63,102 @@ void start_all_std_tests(void) {
 	test_Multimap<std::multimap<Number, int> >();
 	test_Multimap<std::multimap<Number, Number> >();
 #endif
-	end_test("Multimap");
+	end_test("multimap");
 
-	test("Set");
+	test("set");
 	test_Set<std::set<int> >();
 #ifdef FULL
 	test_Set<std::set<Number> >();
 #endif
-	end_test("Set");
+	end_test("set");
 
-	test("Multiset");
+	test("multiset");
 	test_Multiset<std::multiset<int> >();
 #ifdef FULL
 	test_Multiset<std::multiset<Number> >();
 #endif
-	end_test("Multiset");
+	end_test("multiset");
 
-	test("Deque");
+	test("deque");
 	test_Deque<std::deque<int> >();
 #ifdef FULL
 	test_Deque<std::deque<Number> >();
 #endif
-	end_test("Deque");
+	end_test("deque");
 }
 
 /**
  * * ft tests
  **/
 void start_all_ft_tests(void) {
-	test("Vector");
-	test_Vector<ft::Vector<int> >();
+	test("vector");
+	test_Vector<ft::vector<int> >();
 #ifdef FULL
-	test_Vector<ft::Vector<Number> >();
+	test_Vector<ft::vector<Number> >();
 #endif
-	end_test("Vector");
+	end_test("vector");
 
-	test("List");
-	test_List<ft::List<int>, int>();
+	test("list");
+	test_List<ft::list<int>, int>();
 #ifdef FULL
-	test_List<ft::List<Number>, Number>();
+	test_List<ft::list<Number>, Number>();
 #endif
-	end_test("List");
+	end_test("list");
 
-	test("Stack");
-	test_Stack<ft::Stack<int>, ft::List<int> >();
+	test("stack");
+	test_Stack<ft::stack<int>, ft::list<int> >();
 #ifdef FULL
-	test_Stack<ft::Stack<Number>, ft::List<Number> >();
+	test_Stack<ft::stack<Number>, ft::list<Number> >();
 #endif
-	end_test("Stack");
+	end_test("stack");
 
-	test("Queue");
-	test_Queue<ft::Queue<int>, ft::List<int> >();
+	test("queue");
+	test_Queue<ft::queue<int>, ft::list<int> >();
 #ifdef FULL
-	test_Queue<ft::Queue<Number>,ft::List<Number> >();
+	test_Queue<ft::queue<Number>,ft::list<Number> >();
 #endif
-	end_test("Queue");
+	end_test("queue");
 
-	test("Map");
-	test_Map<ft::Map<int, int> >();
+	test("map");
+	test_Map<ft::map<int, int> >();
 #ifdef FULL
-	test_Map<ft::Map<char, int> >(48);
-	test_Map<ft::Map<char, Number> >(48);
-	test_Map<ft::Map<Number, int> >();
-	test_Map<ft::Map<Number, Number> >();
+	test_Map<ft::map<char, int> >(48);
+	test_Map<ft::map<char, Number> >(48);
+	test_Map<ft::map<Number, int> >();
+	test_Map<ft::map<Number, Number> >();
 #endif
-	end_test("Map");
+	end_test("map");
 
-	test("Multimap");
-	test_Multimap<ft::Multimap<int, int> >();
+	test("multimap");
+	test_Multimap<ft::multimap<int, int> >();
 #ifdef FULL
-	test_Multimap<ft::Multimap<char, int> >(48);
-	test_Multimap<ft::Multimap<char, Number> >(48);
-	test_Multimap<ft::Multimap<Number, int> >();
-	test_Multimap<ft::Multimap<Number, Number> >();
+	test_Multimap<ft::multimap<char, int> >(48);
+	test_Multimap<ft::multimap<char, Number> >(48);
+	test_Multimap<ft::multimap<Number, int> >();
+	test_Multimap<ft::multimap<Number, Number> >();
 #endif
-	end_test("Multimap");
+	end_test("multimap");
 
-	test("Set");
-	test_Set<ft::Set<int> >();
+	test("set");
+	test_Set<ft::set<int> >();
 #ifdef FULL
-	test_Set<ft::Set<Number> >();
+	test_Set<ft::set<Number> >();
 #endif
-	end_test("Set");
+	end_test("set");
 
-	test("Multiset");
-	test_Multiset<ft::Multiset<int> >();
+	test("multiset");
+	test_Multiset<ft::multiset<int> >();
 #ifdef FULL
-	test_Multiset<ft::Multiset<Number> >();
+	test_Multiset<ft::multiset<Number> >();
 #endif
-	end_test("Multiset");
+	end_test("multiset");
 
-	test("Deque");
-	test_Deque<ft::Deque<int> >();
+	test("deque");
+	test_Deque<ft::deque<int> >();
 #ifdef FULL
-	test_Deque<ft::Deque<Number> >();
+	test_Deque<ft::deque<Number> >();
 #endif
-	end_test("Deque");
+	end_test("deque");
 }
 
 int main(void)

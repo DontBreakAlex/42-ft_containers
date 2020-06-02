@@ -59,7 +59,7 @@ void test_Stack(void)
 		lst.push_back(42);
 		lst.push_back(43);
 		lst.push_back(99);
-		display_container("[5, 42, 43, 99] {List}:", lst);
+		display_container("[5, 42, 43, 99] {list}:", lst);
 			assert(lst.size() == 4);
 
 		StackType stk(lst);
@@ -87,7 +87,7 @@ void test_Stack(void)
 		std::cout << "[] (size: " << stk.size() << ")\n";
 			assert(stk.size() == 0);
 
-		display_container("[5, 42, 43, 99] {ft::List after, no change}:", lst);
+		display_container("[5, 42, 43, 99] {ft::list after, no change}:", lst);
 	}
 
 	std::cout << "\n---comparison\n\n";

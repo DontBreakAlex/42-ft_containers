@@ -22,8 +22,8 @@ void test_Vector(void)
 		{
 			std::cout << "[begin] == [end] on empty vector" << '\n';
 				assert(empty_vector.begin() == empty_vector.end());
-			std::cout << "capacity? " << empty_vector.capacity() << '\n';
-				assert(empty_vector.capacity() == 0);
+			// std::cout << "capacity? " << empty_vector.capacity() << '\n';
+				// assert(empty_vector.capacity() == 0);
 			std::cout << "max_size (vector) " << empty_vector.max_size() << '\n';
 			std::cout << "empty? " << empty_vector.empty() << '\n';
 				assert(empty_vector.empty());
@@ -66,14 +66,12 @@ void test_Vector(void)
 	std::cout << "\n---reserve\n\n";
 	{
 		VectorType vec;
-		std::cout << "empty vector capacity " << vec.capacity() << '\n';
-			assert(vec.capacity() == 0);
 		vec.reserve(256);
-			assert(vec.capacity() == 256);
+			assert(vec.capacity() >= 256);
 		std::cout << "empty vector{reserved 256} capacity " << vec.capacity() << '\n';
 		vec.reserve(64);
 		std::cout << "empty vector{reserved 64, no change} capacity " << vec.capacity() << '\n';
-			assert(vec.capacity() == 256);
+			assert(vec.capacity() >= 256);
 	}
 
 	std::cout << "\n---push_back\n\n";
@@ -159,19 +157,19 @@ void test_Vector(void)
 	{
 		VectorType vec;
 
-		vec.assign(5, 42);
+		vec.assign((size_t)5, 42);
 		display_container("[42, 42, 42, 42, 42]:", vec);
 			assert(vec.size() == 5);
 
 		VectorType vec2;
-		vec2.assign(5, 43);
+		vec2.assign((size_t)5, 43);
 		display_container("vec2[43, 43, 43, 43, 43]:", vec2);
 			assert(vec2.size() == 5);
 		vec.assign(vec2.begin(), vec2.end());
 		display_container("vec [43, 43, 43, 43, 43]:", vec);
 			assert(vec.size() == 5);
 
-		vec2.assign(5, 44);
+		vec2.assign((size_t)5, 44);
 		display_container("vec[43, 43, 43, 43, 43]:", vec);
 		display_container("vec2[44, 44, 44, 44, 44]:", vec2);
 			assert(vec2.size() == 5);
@@ -188,7 +186,7 @@ void test_Vector(void)
 			assert(vec.back() == 5);
 			assert(vec.size() == 1);
 
-		vec.insert(vec.begin(), 2, 42);
+		vec.insert(vec.begin(), (size_t)2, 42);
 		display_container("vec[42, 42, 5]:", vec);
 			assert(vec.front() == 42);
 			assert(vec.back() == 5);

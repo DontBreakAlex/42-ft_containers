@@ -19,13 +19,15 @@
 
 # include <iostream>
 # include "test/Number.hpp"
-# include "include/Vector.hpp"
-# include "include/List.hpp"
-# include "include/Stack.hpp"
-# include "include/Queue.hpp"
-# include "include/Map.hpp"
-# include "include/Set.hpp"
-# include "include/Deque.hpp"
+# include "../vector/vector.hpp"
+# include "../list/list.hpp"
+# include "../stack/stack.hpp"
+# include "../queue/queue.hpp"
+# include "../map/map.hpp"
+# include "../set/set.hpp"
+# include "../multimap/multimap.hpp"
+# include "../multiset/multiset.hpp"
+# include "../deque/deque.hpp"
 
 # include <vector>
 # include <list>
@@ -102,10 +104,10 @@ void display_container(std::string const &header, std::multimap<key_type, value_
 }
 
 template<typename key_type, typename value_type>
-void display_container(std::string const &header, ft::Map<key_type, value_type> const &ctn)
+void display_container(std::string const &header, ft::map<key_type, value_type> const &ctn)
 {
-	typename ft::Map<key_type, value_type>::const_iterator it = ctn.begin();
-	typename ft::Map<key_type, value_type>::const_iterator ite = ctn.end();
+	typename ft::map<key_type, value_type>::const_iterator it = ctn.begin();
+	typename ft::map<key_type, value_type>::const_iterator ite = ctn.end();
 	std::cout << header;
 	if (it == ite)
 		std::cout << " empty !";
@@ -121,10 +123,10 @@ void display_container(std::string const &header, ft::Map<key_type, value_type> 
 }
 
 template<typename key_type, typename value_type>
-void display_container(std::string const &header, ft::Multimap<key_type, value_type> const &ctn)
+void display_container(std::string const &header, ft::multimap<key_type, value_type> const &ctn)
 {
-	typename ft::Multimap<key_type, value_type>::const_iterator it = ctn.begin();
-	typename ft::Multimap<key_type, value_type>::const_iterator ite = ctn.end();
+	typename ft::multimap<key_type, value_type>::const_iterator it = ctn.begin();
+	typename ft::multimap<key_type, value_type>::const_iterator ite = ctn.end();
 	std::cout << header;
 	if (it == ite)
 		std::cout << " empty !";
